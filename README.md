@@ -26,7 +26,7 @@ A simple weather application built using React that allows users to retrieve wea
 
 ## API Reference
 
-The Weather App doesn't require an external API for basic functionality. However, you can enhance it by integrating with a weather data provider like OpenWeatherMap or WeatherAPI.
+To follow
 
 ## Contributing
 
