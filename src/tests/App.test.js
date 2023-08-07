@@ -4,6 +4,7 @@ import forecast from "../data/forecast.json";
 
 describe("App", () => {
   it("renders App component correctly", () => {
+    // eslint-disable-next-line react/react-in-jsx-scope
     render(<App location={forecast.location} />);
     const h1Element = screen.getByText(/Manchester, UK/i);
     expect(h1Element).toBeInTheDocument();
