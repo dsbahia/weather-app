@@ -19,7 +19,7 @@ exports[`ForecastSummaries matches snapshot 1`] = `
         data-testid="forecast-icon"
       >
         <img
-          alt=""
+          alt="Stub description"
         />
       </div>
       <div
@@ -47,7 +47,7 @@ exports[`ForecastSummaries matches snapshot 1`] = `
         data-testid="forecast-icon"
       >
         <img
-          alt=""
+          alt="Another stub description"
         />
       </div>
       <div
