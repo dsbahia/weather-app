@@ -10,7 +10,7 @@ function ForecastSummaries({ forecasts }) {
           date={forecast.date}
           description={forecast.description}
           icon={forecast.icon}
-          temperature={forecast.icon}
+          temperature={forecast.temperature}
         />
       ))}
     </div>
