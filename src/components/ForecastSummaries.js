@@ -1,7 +1,7 @@
 import React from "react";
 import ForecastSummary from "./ForecastSummary";
 
-function ForecastSummaries({ forecasts }) {
+function ForecastSummaries({ forecasts, onForecastSelect }) {
   return (
     <div className="forecast-summaries">
       {forecasts.map((forecast) => (
@@ -11,6 +11,7 @@ function ForecastSummaries({ forecasts }) {
           description={forecast.description}
           icon={forecast.icon}
           temperature={forecast.temperature}
+          onSelect={onForecastSelect}
         />
       ))}
     </div>
