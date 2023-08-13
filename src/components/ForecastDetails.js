@@ -2,6 +2,9 @@ import React from "react";
 import "../styles/ForecastDetails.css";
 
 function ForecastDetails({ forecast }) {
+  if (!forecast) {
+    return <p>No forecast details available.</p>;
+  }
   const { date, temperature, humidity, wind } = forecast;
 
   const formattedDate = new Date(date).toDateString();

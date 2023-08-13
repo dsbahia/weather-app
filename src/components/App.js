@@ -1,11 +1,22 @@
 import "../styles/App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import ForecastDetails from "./ForecastDetails";
+import getForecast from "../requests/getForecast";
 
-function App({ forecasts, location }) {
-  const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
+function App() {
+  const [location, setLocation] = useState({
+    city: "",
+    country: "",
+  });
+
+  const [forecasts, setForecasts] = useState([]);
+  const [selectedDate, setSelectedDate] = useState(0);
+
+  useEffect(() => {
+    getForecast(setSelectedDate, setForecasts, setLocation);
+  }, []);
 
   const handleForecastSelect = (date) => {
     setSelectedDate(date);
