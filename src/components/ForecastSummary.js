@@ -1,21 +1,22 @@
 import React from "react";
 import "../styles/ForecastSummaries.css";
-// import iconData from "../data/iconData.json";
+import iconData from "../data/iconData.json";
 
-function ForecastSummary({ date, temperature, description, onSelect }) {
-//  const weatherCode = `${icon.slice(0, 1)}00`;
+function ForecastSummary(props) {
+  const { date, description, icon, temperature, onSelect } = props;
+  const weatherCode = `${icon.slice(0, 1)}00`;
   const formattedDate = new Date(date).toDateString();
   return (
     <div className="forecast-summary" data-testid="forecast-summary">
       <div className="forecast-summary__date">{formattedDate}</div>
       <div className="forecast-summary__icon" data-testid="forecast-icon">
-        <img alt={description} />
+        <img src={iconData[weatherCode]} alt={description} />
       </div>
       <div className="forecast-summary__temperature">
         {temperature.max}&deg;C
       </div>
       <div className="forecast-summary__description">{description}</div>
-      <button type="button" onClick={() => onSelect(date)}>
+      <button type="button" className="button" onClick={() => onSelect(date)}>
         More details
       </button>
     </div>

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const getForecast = (setSelectedDate, setForecasts, setLocation) => {
+function getForecast(setSelectedDate, setForecasts, setLocation) {
   axios
     .get("https://cmd-shift-weather-app.onrender.com/forecast")
     .then((response) => {
@@ -8,6 +8,6 @@ const getForecast = (setSelectedDate, setForecasts, setLocation) => {
       setForecasts(response.data.forecasts);
       setLocation(response.data.location);
     });
-};
+}
 
 export default getForecast;
