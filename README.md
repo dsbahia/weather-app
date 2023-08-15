@@ -43,7 +43,9 @@ A simple weather application built using React that allows users to retrieve wea
 
 ## API Reference
 
-To follow
+The Weather App utilizes the Command Shift Weather API to retrieve 5-day weather forecasts for different cities. The instructions for this API can be found by clicking the link below.
+
+- **Endpoint**: `https://cmd-shift-weather-app.onrender.com/forecast`
 
 ## Contributing
 
