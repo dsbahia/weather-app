@@ -2,8 +2,7 @@ import React from "react";
 import "../styles/ForecastSummaries.css";
 import iconData from "../data/iconData.json";
 
-function ForecastSummary(props) {
-  const { date, description, icon, temperature, onSelect } = props;
+function ForecastSummary({ date, description, icon, temperature, onSelect }) {
   const weatherCode = `${icon.slice(0, 1)}00`;
   const formattedDate = new Date(date).toDateString();
   return (
